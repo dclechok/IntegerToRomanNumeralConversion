@@ -39,7 +39,10 @@ function romanToInt(s){
 function sortSingles(numArray){
 	console.log('sorting singles - first digit' + numArray[0]);
 	for(let c = 1; c <= Number(numArray[0]); c++){
-		buildingRomanNumeral.push('V');
+		if(numArray[0] >= 1 && numArray[0] <= 3){buildingRomanNumeral.push('I');}
+		else if(numArray[0] === 4){buildingRomanNumeral.push('IV');}
+		else if(numArray[0] >= 5 && numArray[0] <= 8){buildingRomanNumeral.push('v');}
+		else if(numArray[0] === 9){buildingRomanNumeral.push('IX');}
 	}
 	console.log(buildingRomanNumeral);
 }
@@ -52,12 +55,12 @@ function sortDoubles(numArray){
 	console.log(buildingRomanNumeral);
 }
 
-function sortHundreds(numArray){
+function sortHundreds(numArray){ //sort the hundreds column out
 	console.log('sorting hundreds - first digit ' + numArray[0]);
 	for(let c = 1; c <= Number(numArray[0]); c++){
 		if(numArray[0] >= 1 && numArray[0] <= 3){buildingRomanNumeral.push('C');}
 		else if(numArray[0] === 4){buildingRomanNumeral.push('CD');}
-		else if(numArray[0] >= 5 && numArray[0] <= 8){buildingRomanNumeral.push('D';)}
+		else if(numArray[0] >= 5 && numArray[0] <= 8){buildingRomanNumeral.push('D');}
 		else if(numArray[0] === 9){buildingRomanNumeral.push('CM');}
 			
 	}

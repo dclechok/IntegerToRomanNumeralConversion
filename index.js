@@ -13,7 +13,7 @@ function romanToInt(s){
 	// console.log(numberArrayOfChars);
 	// console.log(numberArrayOfChars.length + ' is the array length');
 	// console.log('------------------------');
-	
+
 	//sort each place for thousands, hundreds, tens (doubles), and ones (singles)
 	if(numberArrayOfChars.length === 4) {
 		sortThousands(numberArrayOfChars);
@@ -87,7 +87,7 @@ function sortThousands(numArray){ //thousands
 	//console.log(buildingRomanNumeral);
 }
 
-
-romanToInt(1034); //number to test
+var number = prompt("Enter a number to convert to a Roman numeral: ");
+romanToInt(number); //number to test
 
 //3322 

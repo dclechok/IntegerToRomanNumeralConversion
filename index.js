@@ -55,7 +55,11 @@ function sortDoubles(numArray){
 function sortHundreds(numArray){
 	console.log('sorting hundreds - first digit ' + numArray[0]);
 	for(let c = 1; c <= Number(numArray[0]); c++){
-		buildingRomanNumeral.push('C');
+		if(numArray[0] >= 1 && numArray[0] <= 3){buildingRomanNumeral.push('C');}
+		else if(numArray[0] === 4){buildingRomanNumeral.push('CD');}
+		else if(numArray[0] >= 5 && numArray[0] <= 8){buildingRomanNumeral.push('D';)}
+		else if(numArray[0] === 9){buildingRomanNumeral.push('CM');}
+			
 	}
 	console.log(buildingRomanNumeral);
 }
